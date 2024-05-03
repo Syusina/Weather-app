@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, Store } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 interface Weather {
@@ -7,7 +7,7 @@ interface Weather {
 
 export const getWeather = createAsyncThunk(
   'weather/getWeather',
-  async ({ cityName }: { cityName: string }) => {
+  async (cityName: string) => {
     try {
       const coordinates = await axios.get(`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1&language=en&format=json`);
       const { latitude,  longitude } = coordinates.data.results[0];
@@ -15,15 +15,16 @@ export const getWeather = createAsyncThunk(
       const response = await axios.get(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m&forecast_days=1`);
       const { temperature_2m } = response.data.hourly;
       const temperature = [];
-      for (let i = 6; i <= 18; i += 1) {
+      for (let i = 6; i <= 18; i += 3) {
         temperature.push({
+          id: cityName + i,
           time: `${i}:00`,
           temp: temperature_2m[i],
         });
       }
       return temperature;
     } catch (e) {
-      throw new Error('Check the cuty name is correct');
+      throw new Error('Check the city name is correct');
     }
   }
 );
@@ -52,5 +53,7 @@ const weatherSlice = createSlice({
     });
   }
 });
+
+export const selectWeather = (store: Store) => store.weather.data;
 
 export const weatherReducer = weatherSlice.reducer;

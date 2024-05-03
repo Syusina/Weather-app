@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #1ab4e7;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
