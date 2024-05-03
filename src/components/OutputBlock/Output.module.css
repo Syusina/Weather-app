@@ -1,24 +1,36 @@
 .wrapper {
   display: flex;
+  width: 710px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .card {
+  width: 90px;
+  height: 185px;
   padding: 5px 20px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
 }
 
 .time {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgb(41, 41, 41);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   text-align: center;
+  color: rgb(56, 56, 56);
 }
 
 .temp {
   text-align: center;
+  font-size: 16px;
+}
+
+.icon {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.6);
 }

@@ -1,23 +1,33 @@
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 710px;
   margin: 20px 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
 }
 
 .input {
-  padding: 10px;
-  margin: 10px;
+  width: 100%;
+  padding: 15px;
+  margin: 20px;
   border-radius: 8px;
   border: none;
   font-size: 14px;
   font-weight: 400;
+  outline: none;
+}
+
+.input:focus {
+  outline: 1px solid rgb(167, 167, 167);
 }
 
 .btn {
+  width: 200px;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 15px 20px;
   margin: 10px;
   border-radius: 8px;
   border: none;
