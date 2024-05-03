@@ -3,7 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: max-content;
   height: max-content;
+  padding: 20px;
   margin: auto;
+  //background:  rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }

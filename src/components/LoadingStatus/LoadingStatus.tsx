@@ -9,7 +9,7 @@ const LoadingStatus = () => {
 
   return (
     <div className={styles.wrapper}>
-      {isLoading && <CiTimer style={{fontSize:100}}/>}
+      {isLoading && <span className={styles.loader}></span>}
       {error && <p className={styles.error}>{error}</p>}
     </div>
   )
