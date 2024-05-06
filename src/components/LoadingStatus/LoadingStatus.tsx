@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { selectWeatherError, selectWeatherLoading } from "../../store/weaterSlice";
-import { CiTimer } from "react-icons/ci";
 import styles from './LoadingStatus.module.css';
 
 const LoadingStatus = () => {
@@ -9,8 +8,9 @@ const LoadingStatus = () => {
 
   return (
     <div className={styles.wrapper}>
-      {isLoading && <span className={styles.loader}></span>}
-      {error && <p className={styles.error}>{error}</p>}
+      {isLoading ? <span className={styles.loader}></span> : 
+        error ? <p className={styles.error}>{error}</p> : null
+      }
     </div>
   )
 };

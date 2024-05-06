@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 710px;
+  height: 220px;
   justify-content: space-between;
   align-items: center;
 }
@@ -12,7 +12,7 @@
   height: 185px;
   padding: 5px 20px;
   margin: 10px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
 
@@ -20,13 +20,14 @@
   width: 110px;
   height: 205px;
   margin: 0px;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .time {
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 5px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   text-align: center;
   color: rgb(56, 56, 56);
 }
@@ -47,19 +48,19 @@
   width: 100%;
   margin: 5px 0;
   font-size: 5rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 254, 254, 1);
 }
 
 .card:hover > .iconSun {
-  color: rgb(245, 183, 12);
+  color: rgb(245, 229, 9);
 }
 
 .card:hover > .iconCloud {
-  color: rgb(165, 165, 165);
+  color: rgb(57, 58, 82);
 }
 
 .card:hover > .iconRain {
-  color: rgb(5, 5, 5);
+  color: rgb(37, 53, 197);
 }
 
 

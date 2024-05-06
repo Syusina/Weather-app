@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 710px;
+  width: 100%;
+  height: 100px;
   margin: 20px 0;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
@@ -31,7 +32,7 @@
   margin: 10px;
   border-radius: 8px;
   border: none;
-  background: #1ab4e7;
+  background: #5f8dd1;
   color: white;
   font-size: 14px;
   font-weight: 600;
