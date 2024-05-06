@@ -7,17 +7,17 @@ import { IconType } from "../../utilities/IconType";
 const Icon = ({ iconType }: {iconType: string}) => {
    switch(iconType) {
     case IconType.LIGHT_RAIN:
-      return <WiDayRain className={styles.icon}/>;
+      return <WiDayRain className={styles.iconRain}/>;
     case IconType.MODERATE_RAIN:
-      return <WiRain className={styles.icon}/>;
+      return <WiRain className={styles.iconRain}/>;
     case IconType.HEAVY_RAIN:
-      return <WiThunderstorm className={styles.icon}/>;
+      return <WiThunderstorm className={styles.iconRain}/>;
     case IconType.LIGHT_CLOUD:
-      return <WiDaySunny className={styles.icon}/>;
+      return <WiDaySunny className={styles.iconSun}/>;
     case IconType.MODERATE_CLOUD:
-      return <WiCloud className={styles.icon}/>;
+      return <WiCloud className={styles.iconCloud}/>;
     case IconType.HEAVY_CLOUD:
-      return <WiCloudy className={styles.icon}/>;
+      return <WiCloudy className={styles.iconCloud}/>;
     default:
       break;
   }
@@ -27,20 +27,22 @@ const OutputBlock = () => {
   const data = useSelector(selectWeather);
   const isLoading = useSelector(selectWeatherLoading);
 
-
   return (
     <>
-      {!isLoading ? (<div className={styles.wrapper}>
-      {data?.map((el: any) => {
-        return (
-          <div className={styles.card} key={el.id}>
-            <Icon iconType={el.iconType} />
-            <p className={styles.time}>{el.time}</p>
-            <p className={styles.temp}>{el.temp} &#186;C</p>
-          </div>
-        )
-      })}
-      </div>) : null}
+      {!isLoading ? (
+        <div className={styles.wrapper}>
+        {data?.map((el: any) => {
+          return (
+            <div className={styles.card} key={el.id}>
+              <Icon iconType={el.iconType} />
+              <p className={styles.time}>{el.time}</p>
+              <p className={styles.temp}>{el.temp} &#186;C</p>
+            </div>
+          )
+        })}
+        </div>) 
+       : null
+      }
     </>
   )
 };
